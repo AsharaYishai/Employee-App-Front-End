@@ -4,21 +4,21 @@
 
     <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1"></span>
-        <input type="text" class="form-control" placeholder="First Name" aria-label="Username" [(ngModel)]="firstName" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="First Name" aria-label="Username" [(ngModel)]= "employeeObj.firstName" aria-describedby="basic-addon1">
       </div>
 
       <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1"></span>
-        <input type="text" class="form-control" placeholder="Last Name" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="Last Name" aria-label="Username" [(ngModel)]= "employeeObj.lastName" aria-describedby="basic-addon1">
       </div>
       
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <input type="text" class="form-control" placeholder="email" aria-label="Recipient's username" [(ngModel)]= "employeeObj.email" aria-describedby="basic-addon2">
         <span class="input-group-text" id="basic-addon2">.com</span>
       </div>
       
       <div class="input-group md-3">
-        <select class="form-select"  aria-label="default select example">
+        <select class="form-select"  aria-label="default select example" id="department" [(ngModel)]= "employeeObj.departmentId">
             <option value="">Select the Department </option>
             <option value="No Department">No Department</option>
             <option value="Product Development">Product Development</option>
@@ -35,7 +35,7 @@
       </div>
     	
         <div class="input-group md-3">
-            <select class="form-select"  aria-label="default select example">
+            <select class="form-select"  aria-label="default select example" [(ngModel)]= "employeeObj.roleId">
                 <option value="">Select the Department </option>
                 <option value="No Department">No Department</option>
                 <option value="Product Development">Product Development</option>
