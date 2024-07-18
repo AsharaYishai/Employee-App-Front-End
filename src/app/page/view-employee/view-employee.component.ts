@@ -70,8 +70,23 @@ export class ViewEmployeeComponent {
           icon: "error"
         });
       }
-    });
+    }); 
+  }
 
+  public selectedEmployee: any = {
+    "id": null,
+    "firstName": null,
+    "lastName": null,
+    "email": null,
+    "departmentId": null,
+    "roleId": null
+  };
+
+  updateEmploye(employe: any) {
+
+    this.selectedEmployee = employe;
+
+    console.log(employe);
     
   }
 
