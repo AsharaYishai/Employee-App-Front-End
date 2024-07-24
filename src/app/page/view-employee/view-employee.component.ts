@@ -24,7 +24,6 @@ export class ViewEmployeeComponent {
     this.http.get("http://localhost:8080/emp-controller/get-all").subscribe(res=>{
        this.employeeList = res;
       console.log(res);
-      
     })
   }
 
@@ -86,8 +85,18 @@ export class ViewEmployeeComponent {
 
     this.selectedEmployee = employe;
 
+    if(employe!=null){
+      this.selectedEmployee = employe;
+    }
+
     console.log(employe);
-    
+
+  }
+
+  saveUpdateEmployee(){
+    this.http.put("http://localhost:8080/emp-controller/update-employee", this.selectedEmployee).subscribe(res => {
+      console.log("updated!");
+    })
   }
 
 }
